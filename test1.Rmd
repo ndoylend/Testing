@@ -13,7 +13,7 @@ setwd("~/R/Testing/readODS")
 filename <- "test1.ods"
 read.ods(file = filename, sheet = 1)
 
-# This fails (external datasources in worksheet)
+# This fails (worksheet contains link to a cell in test2b.ods)
 filename <- "test2a.ods"
 read.ods(file = filename, sheet = 1)
 

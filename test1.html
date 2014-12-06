@@ -61,9 +61,9 @@ if (window.hljs && document.readyState && document.readyState === "complete") {
 
 <pre class="r"><code>library(readODS)</code></pre>
 <pre><code>## Loading required package: XML</code></pre>
-<pre class="r"><code>setwd(&quot;~/R/Testing/readODS&quot;)
-
-# This works (no external datasources in worksheet)
+<pre class="r"><code>setwd(&quot;~/R/Testing/readODS&quot;)</code></pre>
+<pre><code>## Error in setwd(&quot;~/R/Testing/readODS&quot;): cannot change working directory</code></pre>
+<pre class="r"><code># This works (no external datasources in worksheet)
 filename &lt;- &quot;test1.ods&quot;
 read.ods(file = filename, sheet = 1)</code></pre>
 <pre><code>##       A     B      C
@@ -73,7 +73,7 @@ read.ods(file = filename, sheet = 1)</code></pre>
 ## 4     3   3.6       
 ## 5     4   4.8       
 ## 6     5     6</code></pre>
-<pre class="r"><code># This fails (external datasources in worksheet)
+<pre class="r"><code># This fails (worksheet contains link to a cell in test2b.ods)
 filename &lt;- &quot;test2a.ods&quot;
 read.ods(file = filename, sheet = 1)</code></pre>
 <pre><code>## Warning in is.na(xmlAttrs(row)[&quot;number-rows-repeated&quot;]): is.na() applied
