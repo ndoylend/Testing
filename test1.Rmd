@@ -7,7 +7,6 @@ output: html_document
 
 ```{r, error=TRUE }
 library(readODS)
-setwd("~/R/Testing/readODS")
 
 # This works (no external datasources in worksheet)
 filename <- "test1.ods"
