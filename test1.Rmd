@@ -1,0 +1,21 @@
+---
+title: "Testing readODS"
+author: "ND"
+date: "06/12/2014"
+output: html_document
+---
+
+```{r, error=TRUE }
+library(readODS)
+setwd("~/R/Testing/readODS")
+
+# This works (no external datasources in worksheet)
+filename <- "test1.ods"
+read.ods(file = filename, sheet = 1)
+
+# This fails (external datasources in worksheet)
+filename <- "test2a.ods"
+read.ods(file = filename, sheet = 1)
+
+sessionInfo()
+```
